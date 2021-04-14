@@ -1,0 +1,29 @@
+{
+  "name": "weather-app",
+  "version": "1.0.0",
+  "description": "Weather App created with HTML, UIkit, and vanilla Java Script. I will learn how to utilize API and how to style with UIkit, as well as utilize my new skills with Webpack.  Brought to you by The Odin Project.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "webpack --watch",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P-Hsgw/weather-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/P-Hsgw/weather-app/issues"
+  },
+  "homepage": "https://github.com/P-Hsgw/weather-app#readme",
+  "devDependencies": {
+    "webpack": "^5.32.0",
+    "webpack-cli": "^4.6.0"
+  },
+  "dependencies": {
+    "uikit": "^3.6.19"
+  }
+}
