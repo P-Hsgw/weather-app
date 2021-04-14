@@ -1,0 +1,2 @@
+Weather App created with HTML, UIkit, and vanilla Java Script. I will learn how to utilize API and how to style with UIkit, as well as utilize my new skills with Webpack. 
+Brought to you by The Odin Project.
