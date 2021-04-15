@@ -1,4 +1,4 @@
-import { createCard, removeCard } from "./dom-manipulation";
+import { createCard, removeCard, backgroundChange } from "./dom-manipulation";
 
 async function fetchWeather(search) {
   try {
@@ -10,7 +10,7 @@ async function fetchWeather(search) {
   
     console.log(weather.data[0]);
     removeCard();
-  
+    backgroundChange(weather.data[0].pod)
     createCard(
       weather.data[0].city_name,
       weather.data[0].temp,

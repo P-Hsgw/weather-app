@@ -15,7 +15,7 @@ function createCard(city, temperature, humidity, description, icon, wind) {
   const cardParent = document.createElement("div");
   cardParent.classList.add("uk-card");
   cardParent.classList.add("uk-card-default");
-
+ 
   const cardHeader = document.createElement("div");
   cardHeader.classList.add("uk-card-header");
 
@@ -92,4 +92,16 @@ function createCard(city, temperature, humidity, description, icon, wind) {
   cardFooter.appendChild(unitSwitch);
 }
 
-export { createCard, removeCard };
+function backgroundChange(partOfTheDay) {
+  const background = document.querySelector("#background")
+  // Api returns d for day and n for night
+  if (partOfTheDay == "d") {
+    background.style.backgroundImage = "url(./images/day.jpg)"
+  } else if (partOfTheDay == "n") {
+    background.style.backgroundImage = "url(./images/night.jpg)"
+  } else {
+    console.log(partOfTheDay)
+  }
+}
+
+export { createCard, removeCard, backgroundChange };
