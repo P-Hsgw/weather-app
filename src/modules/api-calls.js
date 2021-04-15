@@ -11,7 +11,7 @@ async function fetchWeather(search) {
   console.log(weather.data[0]);
   removeCard()
 
-  createCard(weather.data[0].city_name, weather.data[0].temp, weather.data[0].rh, weather.data[0].weather.description, )
+  createCard(weather.data[0].city_name, weather.data[0].temp, weather.data[0].rh, weather.data[0].weather.description, weather.data[0].weather.icon)
 }
 
 function searchCity() {
