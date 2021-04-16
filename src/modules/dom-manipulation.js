@@ -63,11 +63,14 @@ function createCard(city, temperature, humidity, description, icon, wind) {
   windParagraph.setAttribute("id", "wind")
   windParagraph.innerHTML = "Wind speed: " + wind + "m/s"
 
-  const cardFooter = document.createElement("div");
-  cardFooter.classList.add("uk-card-footer");
+  // const cardFooter = document.createElement("div");
+  // cardFooter.classList.add("uk-card-footer");
 
-  const unitSwitch = document.createElement("p");
-  unitSwitch.innerHTML = "Change F to C";
+  // const unitSwitch = document.createElement("button");
+  // unitSwitch.classList.add("uk-button")
+  // unitSwitch.classList.add("uk-button-default")
+  // unitSwitch.setAttribute("id", "unitSwitcher")
+  // unitSwitch.innerHTML = "Change Unit";
 
   background.appendChild(section);
   section.appendChild(div);
@@ -88,8 +91,10 @@ function createCard(city, temperature, humidity, description, icon, wind) {
   cardBody.appendChild(windParagraph)
   cardBody.appendChild(humidityParagraph);
 
-  cardParent.appendChild(cardFooter);
-  cardFooter.appendChild(unitSwitch);
+  // cardParent.appendChild(cardFooter);
+  // cardFooter.appendChild(unitSwitch);
+
+  
 }
 
 function backgroundChange(partOfTheDay) {
