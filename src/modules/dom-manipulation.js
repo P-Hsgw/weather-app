@@ -6,7 +6,7 @@ function removeCard() {
   }
 }
 
-function createCard(city, temperature, humidity, description, icon, wind) {
+function createCard(city, temperature, temperatureF, humidity, description, icon, wind, windF) {
   const section = document.createElement("div");
   section.classList.add("uk-section");
 
@@ -55,6 +55,12 @@ function createCard(city, temperature, humidity, description, icon, wind) {
   tempParagraph.setAttribute("id", "temp");
   tempParagraph.innerHTML = "Temperature: " + temperature + "°C";
 
+  const tempParagraphF = document.createElement("p");
+  tempParagraphF.setAttribute("id", "tempF");
+  tempParagraphF.classList.add("uk-margin-remove-top")
+  tempParagraphF.style.display = "none"
+  tempParagraphF.innerHTML = "Temperature: " + temperatureF + "°F"; 
+
   const humidityParagraph = document.createElement("p");
   humidityParagraph.setAttribute("id", "humid");
   humidityParagraph.innerHTML = "Humidity: " + Math.round(humidity) + "%";
@@ -63,14 +69,19 @@ function createCard(city, temperature, humidity, description, icon, wind) {
   windParagraph.setAttribute("id", "wind")
   windParagraph.innerHTML = "Wind speed: " + Math.round(wind) + "m/s"
 
-  // const cardFooter = document.createElement("div");
-  // cardFooter.classList.add("uk-card-footer");
+  const windParagraphF = document.createElement("p")
+  windParagraphF.setAttribute("id", "windF")
+  windParagraphF.style.display = "none"
+  windParagraphF.innerHTML = "Wind speed: " + Math.round(windF) + "mph"
 
-  // const unitSwitch = document.createElement("button");
-  // unitSwitch.classList.add("uk-button")
-  // unitSwitch.classList.add("uk-button-default")
-  // unitSwitch.setAttribute("id", "unitSwitcher")
-  // unitSwitch.innerHTML = "Change Unit";
+  const cardFooter = document.createElement("div");
+  cardFooter.classList.add("uk-card-footer");
+
+  const unitSwitch = document.createElement("button");
+  unitSwitch.classList.add("uk-button")
+  unitSwitch.classList.add("uk-button-default")
+  unitSwitch.setAttribute("id", "unitSwitcher")
+  unitSwitch.innerHTML = "Change Units";
 
   background.appendChild(section);
   section.appendChild(div);
@@ -88,11 +99,13 @@ function createCard(city, temperature, humidity, description, icon, wind) {
 
   cardParent.appendChild(cardBody);
   cardBody.appendChild(tempParagraph);
+  cardBody.appendChild(tempParagraphF);
   cardBody.appendChild(windParagraph)
+  cardBody.appendChild(windParagraphF)
   cardBody.appendChild(humidityParagraph);
 
-  // cardParent.appendChild(cardFooter);
-  // cardFooter.appendChild(unitSwitch);
+  cardParent.appendChild(cardFooter);
+  cardFooter.appendChild(unitSwitch);
 
   
 }
