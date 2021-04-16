@@ -57,11 +57,11 @@ function createCard(city, temperature, humidity, description, icon, wind) {
 
   const humidityParagraph = document.createElement("p");
   humidityParagraph.setAttribute("id", "humid");
-  humidityParagraph.innerHTML = "Humidity: " + humidity + "%";
+  humidityParagraph.innerHTML = "Humidity: " + Math.round(humidity) + "%";
 
   const windParagraph = document.createElement("p")
   windParagraph.setAttribute("id", "wind")
-  windParagraph.innerHTML = "Wind speed: " + wind + "m/s"
+  windParagraph.innerHTML = "Wind speed: " + Math.round(wind) + "m/s"
 
   // const cardFooter = document.createElement("div");
   // cardFooter.classList.add("uk-card-footer");

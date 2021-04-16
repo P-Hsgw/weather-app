@@ -39,7 +39,6 @@ function searchCity() {
   const input = document.querySelector("input");
   const button = document.querySelector("button");
 
-
   document.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
       fetchWeather(input.value);;
